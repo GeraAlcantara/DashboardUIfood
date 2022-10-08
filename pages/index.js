@@ -22,9 +22,13 @@ export default function Home() {
           </div>
           {/* iconos app 8 */}
 
-          <div className='flex flex-wrap justify-center'>
+          <div className='flex flex-col justify-center'>
             <div className='text-2xl flex flex-col items-center '>
               <FaHome></FaHome>
+              <span className='text-sm'>Home</span>
+            </div>
+            <div className='text-2xl flex flex-col items-center '>
+              <FaBell></FaBell>
               <span className='text-sm'>Home</span>
             </div>
           </div>
