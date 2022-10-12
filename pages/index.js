@@ -1,8 +1,10 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
-import { FaGithubSquare, FaGratipay, FaAlignRight, FaTimes } from "react-icons/fa";
+import { FaGithubSquare, FaGratipay, FaAlignRight, FaTimes, FaEdit, FaMinus, FaPlus } from "react-icons/fa";
 import Card from "../src/components/Card";
 import Chips from "../src/components/Chips";
+import ProductCard from "../src/components/ProductCard";
 import Search from "../src/components/Search";
 import SideBar from "../src/components/SideBar";
 
@@ -32,6 +34,7 @@ export default function Home() {
         <button onClick={toogleMenu}>{showMenu ? <FaTimes></FaTimes> : <FaAlignRight className='p-1'></FaAlignRight>}</button>
       </nav>
       {/* Mobile Menu END*/}
+
       {/* NAV end */}
 
       {/* Content */}
@@ -71,36 +74,19 @@ export default function Home() {
               {/* Order Status End */}
 
               {/* Pills */}
-              <div className='flex py-8 gap-4 text-sm'>
+              <div className='flex py-4 gap-4 text-sm'>
                 <button className='bg-[#ec7905] px-4 py-1 text-white rounded-full'>Dine In</button>
                 <button className='bg-gray-200 px-4 py-1 text-gray-400 rounded-full'>Take it Away</button>
               </div>
               {/* Pills END */}
 
-              {/* Product */}
-              <div className='grid grid-col-5 grid-rows-2'>
-                <div className='row-end-2 bg-red-600 '>
-                  <h1>foto</h1>
-                </div>
-                <div className='col-start-2 col-span-3  row-span-2 flex flex-col justify-between'>
-                  <div className='bg-blue-700'>
-                    <h1>name</h1>
-                    <p>Notas</p>
-                    <p>Price</p>
-                  </div>
-                  <div className='bg-orange-600 flex justify-between'>
-                    <div className='flex '>
-                      <button className='bg-gray-200 text-gray-500 rounded-full text-lg text-bold w-8 h-8'>
-                        <span className='font-bold text-lg '>-</span>
-                      </button>
-                      <span className='font-bold text-lg px-4 '>4</span>
-                      <button className='bg-gray-200 text-gray-500 rounded-full text-lg w-8 h-8 '>
-                        <span className='font-bold text-lg 4 '>+</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Products */}
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+
+              {/* Product card End */}
             </div>
           </div>
         </aside>
