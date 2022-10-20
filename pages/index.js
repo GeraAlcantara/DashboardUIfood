@@ -35,10 +35,8 @@ export default function Home() {
       </nav>
       {/* Mobile Menu END*/}
 
-      {/* NAV end */}
-
       {/* Content */}
-      <div className='grid grid-cols-8 px-6 lg:pl-28 bg-[#fafafa] relative'>
+      <div className='grid grid-cols-8 px-6 lg:pl-28 bg-[#fafafa]'>
         <main className='col-span-full lg:col-span-6 lg:ml-6'>
           <Search></Search>
           <Chips></Chips>
@@ -48,7 +46,22 @@ export default function Home() {
           </header>
 
           {/* cards Salads  */}
-          <div className='grid grid-cols-1 md:grid-cols-3 justify-around'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-around '>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
             <Card></Card>
             <Card></Card>
             <Card></Card>
@@ -59,34 +72,50 @@ export default function Home() {
         </main>
 
         {/* Shoping Cart */}
-        <aside className='hidden lg:block lg:col-span-2 h-full top-0 right-0  px-8 '>
-          <div className='bg-white my-auto h-[calc(100% - 64px)] w-full relative rounded-2xl'>
-            <div className='px-4 py-8'>
-              {/* Order Status */}
-              <div className='flex justify-between items-center text-gray-400 font-light my-1'>
+        <aside className='hidden lg:col-span-2 lg:relative lg:flex justify-center items-center h-screen transition-all left-0 top-0 absolute w-full '>
+          <div className='top-2 md:right-1 xl:right-4 w-full xl:w-fit xl:fixed mx-4 h-screen lg:h-[calc(100vh - 54px)] bg-white rounded-2xl py-4 '>
+            {/* Order Status */}
+            <div className=''>
+              <div className='flex justify-between items-center text-gray-400 font-light my-1 px-4'>
                 <span>Current Order</span>
                 <span>Table</span>
               </div>
-              <div className='flex justify-between items-center text-lg text-gray-900 font-bold my-1'>
+              <div className='flex justify-between items-center text-lg text-gray-900 font-bold my-1 px-4'>
                 <span>#907653</span>
                 <span>T1</span>
               </div>
               {/* Order Status End */}
 
               {/* Pills */}
-              <div className='flex py-4 gap-4 text-sm'>
+              <div className='flex py-4 gap-4 text-sm px-4'>
                 <button className='bg-[#ec7905] px-4 py-1 text-white rounded-full'>Dine In</button>
                 <button className='bg-gray-200 px-4 py-1 text-gray-400 rounded-full'>Take it Away</button>
               </div>
               {/* Pills END */}
 
               {/* Products */}
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-
+              <div className='h-[400px] xl:h-[610px] hover:overflow-y-auto overflow-x-hidden '>
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+              </div>
               {/* Product card End */}
+
+              <div className='absolute bottom-10 w-full bg-white  rounded-b-2xl px-4 pt-2'>
+                <div className='flex justify-between mb-2'>
+                  <span className='text-gray-400'>Items(7)</span> <span className='font-bold text-gray-800'>$28.67</span>
+                </div>
+                <div className='flex justify-between mb-2'>
+                  <span className='text-gray-400'>Tax(10%)</span> <span className='font-bold text-gray-800'>$2.86</span>
+                </div>
+                <hr className='border-dashed border-gray-300' />
+                <div className='flex justify-between pt-2  mb-4'>
+                  <span className='text-gray-400'>Total</span> <span className='font-bold text-gray-800'>$31,53</span>
+                </div>
+
+                <button className='bg-[#ec7905] py-2 w-full text-center text-white font-medium rounded-2xl '>Print Bills</button>
+              </div>
             </div>
           </div>
         </aside>

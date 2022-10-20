@@ -3,8 +3,8 @@ import { FaEdit, FaMinus, FaPlus } from "react-icons/fa";
 function ProductCard() {
   return (
     <>
-      <div className='grid grid-col-5 grid-rows-2 p-4'>
-        <div className='row-end-2 bg-[#fff2e5] w-16 h-16 rounded-2xl '>
+      <div className='grid lg:grid-cols-[60px_minmax(100px_1fr)] grid-rows-2 lg:p-2 xl:p-8 gap-2'>
+        <div className='row-end-2  bg-[#fff2e5] w-16 h-16 rounded-2xl '>
           <Image src='/jugo.png' width={64} height={64} alt='Orange Juice'></Image>
         </div>
 
