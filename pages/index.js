@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
-import { FaGithubSquare, FaGratipay, FaAlignRight, FaTimes, FaShoppingCart } from "react-icons/fa";
+import { FaGithubSquare, FaAlignRight, FaTimes, FaShoppingCart } from "react-icons/fa";
 import Card from "../src/components/Card";
 import Chips from "../src/components/Chips";
-
 import Search from "../src/components/Search";
 import ShopingCar from "../src/components/ShopingCar";
 import SideBar from "../src/components/SideBar";
@@ -12,13 +10,18 @@ import SideBar from "../src/components/SideBar";
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
   const [showShopingCar, setshowShopingCar] = useState(false);
-
+  /**
+   * Close shpoing card when menu is click, toogle showMenu state
+   */
   const toogleMenu = () => {
     setShowMenu(!showMenu);
     if (showShopingCar) {
       setshowShopingCar(!showShopingCar);
     }
   };
+  /**
+   * Close Mobile menu when shopingcar is click, toogle showShopingCar state
+   */
   const toggleShopingCar = () => {
     setshowShopingCar(!showShopingCar);
     if (showMenu) {
@@ -94,4 +97,3 @@ export default function Home() {
     </div>
   );
 }
-/* hidden lg:col-span-2 lg:relative lg:flex justify-center items-center h-screen transition-all left-0 top-0 absolute w-full */
