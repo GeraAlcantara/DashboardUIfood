@@ -32,7 +32,6 @@ function ProductCard() {
           </div>
         </div>
       </div>
-      <hr />
     </>
   );
 }
