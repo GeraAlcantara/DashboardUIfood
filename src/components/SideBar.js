@@ -2,8 +2,7 @@ import Image from "next/image";
 import { ImPacman } from "react-icons/im";
 import { Navitems } from "../data/data";
 
-function SideBar(props) {
-  const { showMenu } = props;
+function SideBar({ showMenu }) {
   return (
     <nav
       className={`transition-all ease-out duration-500 flex lg:left-0 flex-col w-28 fixed h-full py-6 md:py-10 justify-between z-50 bg-[#fafafa] top-0 ${
